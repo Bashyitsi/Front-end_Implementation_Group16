@@ -56,7 +56,8 @@ class LoginScreen extends StatelessWidget {
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
                 ),
-                contentPadding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                contentPadding: const EdgeInsets.symmetric(
+                    vertical: 10.0, horizontal: 10.0),
               ),
             ),
             const SizedBox(height: 10),
@@ -71,7 +72,8 @@ class LoginScreen extends StatelessWidget {
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
                 ),
-                contentPadding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                contentPadding: const EdgeInsets.symmetric(
+                    vertical: 10.0, horizontal: 10.0),
               ),
             ),
             const SizedBox(height: 10),
@@ -86,7 +88,8 @@ class LoginScreen extends StatelessWidget {
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
                 ),
-                contentPadding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                contentPadding: const EdgeInsets.symmetric(
+                    vertical: 10.0, horizontal: 10.0),
               ),
               obscureText: true,
             ),
@@ -102,7 +105,8 @@ class LoginScreen extends StatelessWidget {
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
                 ),
-                contentPadding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                contentPadding: const EdgeInsets.symmetric(
+                    vertical: 10.0, horizontal: 10.0),
               ),
               obscureText: true,
             ),
@@ -130,7 +134,8 @@ class LoginScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
-                child: const Text('Sign Up', style: TextStyle(color: Colors.white)),
+                child: const Text('Sign Up',
+                    style: TextStyle(color: Colors.white)),
               ),
             ),
             const SizedBox(height: 20),

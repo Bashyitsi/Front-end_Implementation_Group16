@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:visit_rwanda/explore_page.dart';
 import 'package:visit_rwanda/onboardingpage2.dart';
 import 'home_screen.dart';
 

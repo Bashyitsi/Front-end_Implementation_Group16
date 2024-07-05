@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:visit_rwanda/explore_page.dart';
+import 'package:visit_rwanda/trip_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,10 +34,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   static const List<Widget> _widgetOptions = <Widget>[
     HomeContent(),
-    ExplorePage(), // Include ExplorePage directly in the list
-    Center(
-        child: Text('Trips Page',
-            style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold))),
+    ExplorePage(),
+    TripPage(), // Include ExplorePage directly in the list
     Center(
         child: Text('Profile Page',
             style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold))),
@@ -61,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: const [
           CircleAvatar(
             backgroundColor: Colors.grey,
-            child: Text('A'), 
+            child: Text('A'),
           ),
         ],
       ),
@@ -92,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Profile',
           ),
         ],
-        selectedItemColor: Colors.blue, 
+        selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
       ),
     );
@@ -119,14 +118,15 @@ class HomeContent extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {},
-                child: const Text('See all',
-                    style: TextStyle(color: Colors.blue)),
+                child:
+                    const Text('See all', style: TextStyle(color: Colors.blue)),
               ),
             ],
           ),
           const Text(
             'Get discount on all-time favorite\ndestinations',
-            style: TextStyle(fontSize: 16, color: Color.fromARGB(255, 15, 15, 15)),
+            style:
+                TextStyle(fontSize: 16, color: Color.fromARGB(255, 15, 15, 15)),
           ),
           const SizedBox(height: 10),
           const Row(
@@ -137,7 +137,7 @@ class HomeContent extends StatelessWidget {
                 discount: '10%',
                 description:
                     'Explore GOA with amazing discounts, book your adventure today!',
-                imageUrl: 'https://via.placeholder.com/150', 
+                imageUrl: 'https://via.placeholder.com/150',
               ),
               SizedBox(height: 10, width: 10),
               DestinationCard(
@@ -146,7 +146,7 @@ class HomeContent extends StatelessWidget {
                 discount: '25%',
                 description:
                     'Explore Andaman and Nicobar islands with amazing discounts, book your adventure today!',
-                imageUrl: 'https://via.placeholder.com/150', 
+                imageUrl: 'https://via.placeholder.com/150',
               ),
             ],
           ),
@@ -159,14 +159,15 @@ class HomeContent extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {},
-                child: const Text('See all',
-                    style: TextStyle(color: Colors.blue)),
+                child:
+                    const Text('See all', style: TextStyle(color: Colors.blue)),
               ),
             ],
           ),
           const Text(
             'Wanna go on a trip today!',
-            style: TextStyle(fontSize: 16, color: Color.fromARGB(255, 27, 26, 26)),
+            style:
+                TextStyle(fontSize: 16, color: Color.fromARGB(255, 27, 26, 26)),
           ),
           const SizedBox(height: 10),
           const Row(
@@ -177,7 +178,7 @@ class HomeContent extends StatelessWidget {
                 discount: '5%',
                 description:
                     'Explore the beauty of Le Marara, book your adventure today!',
-                imageUrl: 'https://via.placeholder.com/150', 
+                imageUrl: 'https://via.placeholder.com/150',
               ),
               SizedBox(width: 10),
               DestinationCard(
@@ -186,7 +187,7 @@ class HomeContent extends StatelessWidget {
                 discount: '15%',
                 description:
                     'Enjoy a luxurious stay at Cleo Hotel, book your adventure today!',
-                imageUrl: 'https://via.placeholder.com/150', 
+                imageUrl: 'https://via.placeholder.com/150',
               ),
             ],
           ),
@@ -253,7 +254,8 @@ class DestinationCard extends StatelessWidget {
             top: 10,
             left: 10,
             child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
               decoration: BoxDecoration(
                 color: Colors.blue,
                 borderRadius: BorderRadius.circular(8.0),
