@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:visit_rwanda/onboardingpage2.dart';
 
 class OnboardingPage1 extends StatefulWidget {
+  const OnboardingPage1({super.key});
+
   @override
   _OnboardingPage1State createState() => _OnboardingPage1State();
 }
@@ -15,7 +17,7 @@ class _OnboardingPage1State extends State<OnboardingPage1> {
       onTap: () {
         _navigator.currentState?.push(
           MaterialPageRoute(
-            builder: (context) => OnboardingPage2(),
+            builder: (context) => const OnboardingPage2(),
           ),
         );
       },
@@ -26,7 +28,7 @@ class _OnboardingPage1State extends State<OnboardingPage1> {
             // Background image
             Positioned.fill(
               child: Image.asset(
-                'images/onboarding_background1.png',
+                'assets/images/onboarding_background1.png',
                 fit: BoxFit.cover,
               ),
             ),
@@ -49,14 +51,14 @@ class _OnboardingPage1State extends State<OnboardingPage1> {
 
             // Content
             Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 left: 20.0,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Spacer(),
-                  Text(
+                  const Spacer(),
+                  const Text(
                     'Welcome to\nVisit Rwanda\nApp',
                     style: TextStyle(
                       color: Colors.white,
@@ -64,15 +66,15 @@ class _OnboardingPage1State extends State<OnboardingPage1> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: .0),
-                  Text(
+                  const SizedBox(height: .0),
+                  const Text(
                     'All your vacation destination are here,\nenjoy your holiday',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 16.0,
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -81,14 +83,14 @@ class _OnboardingPage1State extends State<OnboardingPage1> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => OnboardingPage2()),
+                                builder: (context) => const OnboardingPage2()),
                             // Navigate to the next screen
                           );
                           // Implement sign-up functionality
 
                           // Handle Skip button press
                         },
-                        child: Text(
+                        child: const Text(
                           'Skip',
                           style: TextStyle(
                             color: Colors.white,
@@ -102,12 +104,12 @@ class _OnboardingPage1State extends State<OnboardingPage1> {
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blue,
-                          padding: EdgeInsets.symmetric(
+                          padding: const EdgeInsets.symmetric(
                             horizontal: 32.0,
                             vertical: 16.0,
                           ),
                         ),
-                        child: Text(
+                        child: const Text(
                           'Get Started',
                           style: TextStyle(
                             color: Colors.white,
@@ -117,7 +119,7 @@ class _OnboardingPage1State extends State<OnboardingPage1> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 16.0),
+                  const SizedBox(height: 16.0),
                 ],
               ),
             ),

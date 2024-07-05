@@ -98,7 +98,7 @@ class _LoginPageState extends State<LoginPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => OnboardingPage1()),
+                            builder: (context) => const OnboardingPage1()),
                       );
                       // Implement login logic
                     },
@@ -125,7 +125,7 @@ class _LoginPageState extends State<LoginPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     "Don't have an account? ",
                     style: TextStyle(
                       fontSize: 16.0,
@@ -136,7 +136,7 @@ class _LoginPageState extends State<LoginPage> {
                     onTap: () {
                       // Implement sign up logic
                     },
-                    child: Text(
+                    child: const Text(
                       "Sign up",
                       style: TextStyle(
                         fontSize: 16.0,
