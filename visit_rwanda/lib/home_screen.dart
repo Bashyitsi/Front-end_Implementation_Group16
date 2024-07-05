@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/explore_page.dart'; // Import ExplorePage
+import 'package:visit_rwanda/explore_page.dart';
 
 void main() {
   runApp(const MyApp());

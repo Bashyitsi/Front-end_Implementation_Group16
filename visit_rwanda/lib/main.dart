@@ -113,7 +113,7 @@ class NextScreen extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => SignUpPage()),
+                                builder: (context) => LoginScreen()),
                             // Navigate to the next screen
                           );
                           // Implement sign-up functionality
