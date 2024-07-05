@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:visit_rwanda/explore_page.dart';
 import 'package:visit_rwanda/onboardingpage2.dart';
+import 'home_screen.dart';
 
 class OnboardingPage3 extends StatefulWidget {
   const OnboardingPage3({super.key});
@@ -100,15 +101,11 @@ class _OnboardingPage1State extends State<OnboardingPage3> {
                       ),
                       ElevatedButton(
                         onPressed: () {
-                           Navigator.push(
+                          Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: (context) => const HomeScreen()),
-                            // Navigate to the next screen
                           );
-                          // Implement sign-up functionality
-
-                          // Handle Get Started button press
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blue,

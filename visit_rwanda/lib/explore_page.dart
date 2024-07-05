@@ -15,7 +15,8 @@ class ExplorePage extends StatelessWidget {
             height: 200, // Adjust height as needed
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: NetworkImage('https://1.cdn.connectingtravel.com/dynamic-images/2000-2999/2960/2960_c=(0,2,1200,622)_w=940_h=488_pjpg.jpg?v=aa92f387'),
+                image: NetworkImage(
+                    'https://1.cdn.connectingtravel.com/dynamic-images/2000-2999/2960/2960_c=(0,2,1200,622)_w=940_h=488_pjpg.jpg?v=aa92f387'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -128,11 +129,13 @@ class ExplorePage extends StatelessWidget {
                     children: [
                       Text(
                         'TOTAL',
-                        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold),
                       ),
                       Text(
                         '\$8799',
-                        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -152,8 +155,8 @@ class ExplorePage extends StatelessWidget {
   }
 }
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class HomeScreen1 extends StatelessWidget {
+  const HomeScreen1({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -198,7 +201,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),
+      home: const HomeScreen1(),
     );
   }
 }
