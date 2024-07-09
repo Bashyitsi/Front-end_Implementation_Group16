@@ -103,42 +103,39 @@ class ExplorePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 10),
-              SingleChildScrollView(
-                scrollDirection: Axis.vertical,
-                child: GridView.count(
-                  shrinkWrap: true,
-                  crossAxisCount: 2,
-                  childAspectRatio: 0.7,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                  children: const [
-                    AdventureCard(
-                      discount: '20%',
-                      image: 'assets/images/hiking.jpeg',
-                      title: 'Hiking',
-                      duration: '4 weeks',
-                    ),
-                    AdventureCard(
-                      discount: '30%',
-                      image: 'assets/images/backpack.jpg',
-                      title: 'Backpack',
-                      duration: '3 Months',
-                    ),
-                    AdventureCard(
-                      discount: '8%',
-                      image: 'assets/images/hot-airballon.jpeg',
-                      title: 'Hot Air Balloon',
-                      duration: '2 weeks',
-                    ),
-                    AdventureCard(
-                      discount: '5%',
-                      image: 'assets/images/kayaking.jpeg',
-                      title: 'Kayaking',
-                      duration: '1 week',
-                    ),
-                  ],
-                ),
-              )
+              GridView.count(
+                shrinkWrap: true,
+                crossAxisCount: 2,
+                childAspectRatio: 0.7,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+                children: const [
+                  AdventureCard(
+                    discount: '20%',
+                    image: 'assets/images/hiking.jpeg',
+                    title: 'Hiking',
+                    duration: '4 weeks',
+                  ),
+                  AdventureCard(
+                    discount: '30%',
+                    image: 'assets/images/backpack.jpg',
+                    title: 'Backpack',
+                    duration: '3 Months',
+                  ),
+                  AdventureCard(
+                    discount: '8%',
+                    image: 'assets/images/hot-airballon.jpeg',
+                    title: 'Hot Air Balloon',
+                    duration: '2 weeks',
+                  ),
+                  AdventureCard(
+                    discount: '5%',
+                    image: 'assets/images/kayaking.jpeg',
+                    title: 'Kayaking',
+                    duration: '1 week',
+                  ),
+                ],
+              ),
             ],
           ),
         ),
