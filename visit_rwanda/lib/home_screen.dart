@@ -138,16 +138,16 @@ class HomeContent extends StatelessWidget {
                 discount: '10%',
                 description:
                     'Explore GOA with amazing discounts, book your adventure today!',
-                imageUrl: 'https://via.placeholder.com/150',
+                imageUrl: 'assets/images/cabin.jpeg',
               ),
               SizedBox(height: 10, width: 10),
               DestinationCard(
-                title: 'Mountain Trek',
+                title: 'Mountain Sabyinyo',
                 weeks: '6 weeks',
                 discount: '25%',
                 description:
                     'Explore Andaman and Nicobar islands with amazing discounts, book your adventure today!',
-                imageUrl: 'https://via.placeholder.com/150',
+                imageUrl: 'assets/images/mountain.jpeg',
               ),
             ],
           ),
@@ -179,7 +179,7 @@ class HomeContent extends StatelessWidget {
                 discount: '5%',
                 description:
                     'Explore the beauty of Le Marara, book your adventure today!',
-                imageUrl: 'https://via.placeholder.com/150',
+                imageUrl: 'assets/images/le-marara.jpeg',
               ),
               SizedBox(width: 10),
               DestinationCard(
@@ -188,7 +188,15 @@ class HomeContent extends StatelessWidget {
                 discount: '15%',
                 description:
                     'Enjoy a luxurious stay at Cleo Hotel, book your adventure today!',
-                imageUrl: 'https://via.placeholder.com/150',
+                imageUrl: 'assets/images/cleo.jpeg',
+              ),
+              DestinationCard(
+                title: 'Le Marara',
+                weeks: '3 weeks',
+                discount: '5%',
+                description:
+                    'Explore the beauty of Le Marara, book your adventure today!',
+                imageUrl: 'assets/images/le-marara.jpeg',
               ),
             ],
           ),
@@ -258,7 +266,7 @@ class DestinationCard extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16.0),
           image: DecorationImage(
-            image: NetworkImage(imageUrl),
+            image: AssetImage(imageUrl),
             fit: BoxFit.cover,
           ),
         ),
