@@ -1,192 +1,5 @@
 import 'package:flutter/material.dart';
 
-class ExplorePage extends StatelessWidget {
-  const ExplorePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // Container for the image
-          Container(
-            width: double.infinity,
-            height: 200, // Adjust height as needed
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: NetworkImage(
-                    'https://1.cdn.connectingtravel.com/dynamic-images/2000-2999/2960/2960_c=(0,2,1200,622)_w=940_h=488_pjpg.jpg?v=aa92f387'),
-                fit: BoxFit.cover,
-              ),
-            ),
-            child: const Align(
-              alignment: Alignment.topLeft,
-              child: Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text(
-                  '4N\\5D',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    backgroundColor: Colors.black54,
-                  ),
-                ),
-              ),
-            ),
-          ),
-          const Expanded(
-            child: SingleChildScrollView(
-              padding: EdgeInsets.all(16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'One and only Hotel - Musanze',
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: 10),
-                  Text(
-                    'Check-in : 3:00 PM',
-                    style: TextStyle(fontSize: 16),
-                  ),
-                  Text(
-                    'Check-out : 11:00 AM',
-                    style: TextStyle(fontSize: 16),
-                  ),
-                  Text(
-                    'Date : 24 - 29 Oct',
-                    style: TextStyle(fontSize: 16),
-                  ),
-                  SizedBox(height: 10),
-                  Text(
-                    'Room : Deluxe suite with panoramic mountain views and luxurious amenities.',
-                    style: TextStyle(fontSize: 16),
-                  ),
-                  SizedBox(height: 20),
-                  Text(
-                    'Hotel',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: 5),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        '1 Room * 5 Days',
-                        style: TextStyle(fontSize: 16),
-                      ),
-                      Text(
-                        '\$7899',
-                        style: TextStyle(fontSize: 16),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Taxes',
-                        style: TextStyle(fontSize: 16),
-                      ),
-                      Text(
-                        '\$999',
-                        style: TextStyle(fontSize: 16),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Resort fee',
-                        style: TextStyle(fontSize: 16),
-                      ),
-                      Text(
-                        '\$599',
-                        style: TextStyle(fontSize: 16),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Discount',
-                        style: TextStyle(fontSize: 16, color: Colors.blue),
-                      ),
-                      Text(
-                        '-\$799',
-                        style: TextStyle(fontSize: 16, color: Colors.blue),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 10),
-                  Divider(),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'TOTAL',
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        '\$8799',
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 20),
-                  Text(
-                    'Activities',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                  // Add more content as per your design
-                ],
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class HomeScreen1 extends StatelessWidget {
-  const HomeScreen1({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.person),
-            onPressed: () {
-              // Handle profile icon press
-            },
-          ),
-        ],
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const ExplorePage()),
-            );
-          },
-          child: const Text('Go to Explore'),
-        ),
-      ),
-    );
-  }
-}
-
 void main() {
   runApp(const MyApp());
 }
@@ -196,12 +9,286 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return const MaterialApp(
+      home: ExplorePage(),
+    );
+  }
+}
+
+class ExplorePage extends StatelessWidget {
+  const ExplorePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SearchBar(),
+              const SizedBox(height: 20),
+              const Text(
+                'Explore Cities',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const Text(
+                'Explore different citys in your budget',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.grey,
+                ),
+              ),
+              const SizedBox(height: 10),
+              SizedBox(
+                height: 100,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: const [
+                    CityCard(
+                        image: 'assets/images/kigali.jpeg', name: 'Kigali'),
+                    CityCard(
+                        image: 'assets/images/musanze.jpeg', name: 'Musanze'),
+                    CityCard(
+                        image: 'assets/images/rubavu.jpeg', name: 'Rubavu'),
+                    CityCard(
+                        image: 'assets/images/kibeho.jpeg', name: 'Kibeho'),
+                    CityCard(
+                        image: 'assets/images/muhanga.jpeg', name: 'Muhanga'),
+                    CityCard(
+                        image: 'assets/images/rwesero.jpeg', name: 'Rwesero'),
+                    CityCard(
+                        image: 'assets/images/kamembe.jpg', name: 'Kamembe'),
+                    CityCard(
+                        image: 'assets/images/vision_city.jpg',
+                        name: 'Vision City'),
+                    CityCard(
+                        image: 'assets/images/rubavu.jpeg', name: 'Rubavu'),
+                    CityCard(
+                        image: 'assets/images/kibeho.jpeg', name: 'Kibeho'),
+                    CityCard(
+                        image: 'assets/images/muhanga.jpeg', name: 'Muhanga'),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 20),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Adventure',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    'See all',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.blue,
+                    ),
+                  ),
+                ],
+              ),
+              const Text(
+                'Different adventure trips!',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.grey,
+                ),
+              ),
+              const SizedBox(height: 10),
+              GridView.count(
+                shrinkWrap: true,
+                crossAxisCount: 2,
+                childAspectRatio: 0.7,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+                children: const [
+                  AdventureCard(
+                    discount: '20%',
+                    image: 'assets/images/hiking.jpeg',
+                    title: 'Hiking',
+                    duration: '4 weeks',
+                  ),
+                  AdventureCard(
+                    discount: '30%',
+                    image: 'assets/images/backpack.jpg',
+                    title: 'Backpack',
+                    duration: '3 Months',
+                  ),
+                  AdventureCard(
+                    discount: '8%',
+                    image: 'assets/images/hot-airballon.jpeg',
+                    title: 'Hot Air Balloon',
+                    duration: '2 weeks',
+                  ),
+                  AdventureCard(
+                    discount: '5%',
+                    image: 'assets/images/kayaking.jpeg',
+                    title: 'Kayaking',
+                    duration: '1 week',
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
       ),
-      home: const HomeScreen1(),
+    );
+  }
+}
+
+class CityCard extends StatelessWidget {
+  final String image;
+  final String name;
+
+  const CityCard({
+    super.key,
+    required this.image,
+    required this.name,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(right: 10),
+      child: Column(
+        children: [
+          ClipOval(
+            child: Image.asset(
+              image,
+              height: 60,
+              width: 60,
+              fit: BoxFit.cover,
+            ),
+          ),
+          const SizedBox(height: 5),
+          Text(
+            name,
+            style: const TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class AdventureCard extends StatelessWidget {
+  final String discount;
+  final String image;
+  final String title;
+  final String duration;
+
+  const AdventureCard({
+    super.key,
+    required this.discount,
+    required this.image,
+    required this.title,
+    required this.duration,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.black12,
+            blurRadius: 5,
+            spreadRadius: 2,
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Stack(
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: Image.asset(
+                  image,
+                  height: 150,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Positioned(
+                top: 8,
+                left: 8,
+                child: Container(
+                  color: Colors.blue,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
+                  child: Text(
+                    discount,
+                    style: const TextStyle(color: Colors.white),
+                  ),
+                ),
+              ),
+              const Positioned(
+                top: 8,
+                right: 8,
+                child: Icon(
+                  Icons.favorite_border,
+                  color: Colors.grey,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 8),
+          Text(
+            title,
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 2),
+          Text(
+            duration,
+            style: const TextStyle(
+              fontSize: 12,
+              color: Colors.grey,
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class SearchBar extends StatelessWidget {
+  const SearchBar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      margin: const EdgeInsets.symmetric(vertical: 10.0),
+      decoration: BoxDecoration(
+        color: const Color.fromARGB(255, 211, 207, 207),
+        borderRadius: BorderRadius.circular(15.0),
+      ),
+      child: const TextField(
+        decoration: InputDecoration(
+          hintText: 'Search',
+          border: InputBorder.none,
+          icon: Icon(Icons.search),
+        ),
+      ),
     );
   }
 }
