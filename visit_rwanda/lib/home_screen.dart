@@ -130,26 +130,38 @@ class HomeContent extends StatelessWidget {
                 TextStyle(fontSize: 16, color: Color.fromARGB(255, 15, 15, 15)),
           ),
           const SizedBox(height: 10),
-          const Row(
-            children: [
-              DestinationCard(
-                title: 'Cabin',
-                weeks: '3 weeks',
-                discount: '10%',
-                description:
-                    'Explore GOA with amazing discounts, book your adventure today!',
-                imageUrl: 'assets/images/cabin.jpeg',
-              ),
-              SizedBox(height: 10, width: 10),
-              DestinationCard(
-                title: 'Mountain Sabyinyo',
-                weeks: '6 weeks',
-                discount: '25%',
-                description:
-                    'Explore Andaman and Nicobar islands with amazing discounts, book your adventure today!',
-                imageUrl: 'assets/images/mountain.jpeg',
-              ),
-            ],
+          const SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                DestinationCard(
+                  title: 'Cabin',
+                  weeks: '3 weeks',
+                  discount: '10%',
+                  description:
+                      'Explore GOA with amazing discounts, book your adventure today!',
+                  imageUrl: 'assets/images/cabin.jpeg',
+                ),
+                SizedBox(height: 10, width: 10),
+                DestinationCard(
+                  title: 'Mountain Sabyinyo',
+                  weeks: '6 weeks',
+                  discount: '25%',
+                  description:
+                      'Explore Andaman and Nicobar islands with amazing discounts, book your adventure today!',
+                  imageUrl: 'assets/images/mountain.jpeg',
+                ),
+                SizedBox(height: 10, width: 10),
+                DestinationCard(
+                  title: 'Cabin',
+                  weeks: '3 weeks',
+                  discount: '10%',
+                  description:
+                      'Explore GOA with amazing discounts, book your adventure today!',
+                  imageUrl: 'assets/images/cabin.jpeg',
+                ),
+              ],
+            ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -171,34 +183,38 @@ class HomeContent extends StatelessWidget {
                 TextStyle(fontSize: 16, color: Color.fromARGB(255, 27, 26, 26)),
           ),
           const SizedBox(height: 10),
-          const Row(
-            children: [
-              DestinationCard(
-                title: 'Le Marara',
-                weeks: '3 weeks',
-                discount: '5%',
-                description:
-                    'Explore the beauty of Le Marara, book your adventure today!',
-                imageUrl: 'assets/images/le-marara.jpeg',
-              ),
-              SizedBox(width: 10),
-              DestinationCard(
-                title: 'Cleo Hotel',
-                weeks: '4 weeks',
-                discount: '15%',
-                description:
-                    'Enjoy a luxurious stay at Cleo Hotel, book your adventure today!',
-                imageUrl: 'assets/images/cleo.jpeg',
-              ),
-              DestinationCard(
-                title: 'Le Marara',
-                weeks: '3 weeks',
-                discount: '5%',
-                description:
-                    'Explore the beauty of Le Marara, book your adventure today!',
-                imageUrl: 'assets/images/le-marara.jpeg',
-              ),
-            ],
+          const SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                DestinationCard(
+                  title: 'Le Marara',
+                  weeks: '3 weeks',
+                  discount: '5%',
+                  description:
+                      'Explore the beauty of Le Marara, book your adventure today!',
+                  imageUrl: 'assets/images/le-marara.jpeg',
+                ),
+                SizedBox(height: 10, width: 10),
+                DestinationCard(
+                  title: 'Cleo Hotel',
+                  weeks: '4 weeks',
+                  discount: '15%',
+                  description:
+                      'Enjoy a luxurious stay at Cleo Hotel, book your adventure today!',
+                  imageUrl: 'assets/images/cleo.jpeg',
+                ),
+                SizedBox(height: 10, width: 10),
+                DestinationCard(
+                  title: 'Le Marara',
+                  weeks: '3 weeks',
+                  discount: '5%',
+                  description:
+                      'Explore the beauty of Le Marara, book your adventure today!',
+                  imageUrl: 'assets/images/le-marara.jpeg',
+                ),
+              ],
+            ),
           ),
         ],
       ),
