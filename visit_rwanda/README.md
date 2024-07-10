@@ -1,5 +1,7 @@
 # visit_rwanda
 
+This is the link to our video project. https://drive.google.com/drive/folders/1alxRkHwHdD8urC3r9fk26M2b3EAoqgP4?usp=sharing
+
 A new Flutter project.
 
 ## Getting Started
